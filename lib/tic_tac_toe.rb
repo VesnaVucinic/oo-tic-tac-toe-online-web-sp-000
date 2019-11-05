@@ -1,6 +1,6 @@
 class TicTacToe
-  def initialize()
-    @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  def initialize
+    @board = Array.new(9, " ")  #[" ", " ", " ", " ", " ", " ", " ", " ", " "]
   end
 
   WIN_COMBINATIONS = [
@@ -21,7 +21,7 @@ class TicTacToe
     user_input.to_i - 1
   end
 
-  def move(index, token)
+  def move(index, token = "X")
     @board[index] = token
   end
 
